@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{% static 'css/cal.css' %}" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="heading">
+                <h1>CALCULATOR</h1>
+                <p>This is a simple calculator</p>
+            </div>
+            <div class="cal">
+                <div class="display">
+                    <textarea class="read-only" readonly></textarea>
+                </div>
+
+                <div class="buttons">
+                    <div class="box">
+                        <button class="button" id="clear">C</button>
+                        <button class="button" id="backspace"><i class="fa-solid fa-delete-left"></i></button>
+
+                        <button class="button" onclick="num(value)" value="7">7</button>
+                        <button class="button" onclick="num(value)" value="8">8</button>
+                        <button class="button" onclick="num(value)" value="9">9</button>
+                        <button class="button" onclick="arth(value)" id="div" value="/">/</button>
+
+                        <button class="button" onclick="num(value)" value="4">4</button>
+                        <button class="button" onclick="num(value)" value="5">5</button>
+                        <button class="button" onclick="num(value)" value="6">6</button>
+                        <button class="button" onclick="arth(value)" id="mul" value="*">*</button>
+
+                        <button class="button" onclick="num(value)" value="1">1</button>
+                        <button class="button" onclick="num(value)" value="2">2</button>
+                        <button class="button" onclick="num(value)" value="3">3</button>
+                        <button class="button" onclick="arth(value)" id="sub" value="-">-</button>
+
+                        <button class="button" onclick="num(value)" value="0">0</button>
+                        <button class="button" id="deci">.</button>
+                        <button class="button" id="equal">=</button>
+                        <button class="button" onclick="arth(value)" id="add" value="+">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'javascript/cal.js' %}"></script>
+    </body>
+</html>
